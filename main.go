@@ -18,5 +18,5 @@ func main() {
 		})
 	})
 
-	http.ListenAndServe("localhost:3000", nil)
+	http.ListenAndServe("0.0.0.0:3000", nil)
 }
