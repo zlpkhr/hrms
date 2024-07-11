@@ -12,7 +12,7 @@
     "module": "NodeNext",
     "outDir": "dist",
     "lib": ["es2022"],
-    "types": ["node"],
+    "types": ["@types/node"],
     "rootDir": "src"
   },
   "include": ["**/*.ts"],
