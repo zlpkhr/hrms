@@ -18,11 +18,17 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
     "forceConsistentCasingInFileNames": true,
+    "removeComments": true,
     "module": "NodeNext",
     "outDir": "dist",
     "lib": ["es2022"],
     "types": ["@types/node"],
-    "rootDir": "src"
+    "rootDir": "src",
+    "sourceMap": true,
+    "baseUrl": "src",
+    "paths": {
+      "hrms/*": ["./*"]
+    }
   },
   "include": ["**/*.ts"],
   "exclude": ["node_modules"]
