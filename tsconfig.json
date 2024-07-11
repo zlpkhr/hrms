@@ -1,5 +1,13 @@
 {
   "compilerOptions": {
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "target": "es2022",
@@ -9,6 +17,7 @@
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
+    "forceConsistentCasingInFileNames": true,
     "module": "NodeNext",
     "outDir": "dist",
     "lib": ["es2022"],
