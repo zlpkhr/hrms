@@ -1,6 +1,9 @@
 {
   "name": "hrms",
   "type": "module",
+  "dependencies": {
+    "fastify": "^4.28.1"
+  },
   "devDependencies": {
     "@types/node": "^20.14.10",
     "prettier": "^3.3.2",

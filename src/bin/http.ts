@@ -1,18 +1,28 @@
-import { createServer } from "node:http";
+import fastify from "fastify";
 
-createServer((req, res) => {
-  if (req.url === "/hello") {
-    res.writeHead(200, { "Content-Type": "application/json" });
-    res.end(
-      JSON.stringify({
-        name: "John Doe",
-      }),
-    );
-  } else {
-    res.writeHead(404);
-    res.end();
-  }
-}).listen({
-  host: process.env["HRMS_HOSTNAME"],
-  port: process.env["HRMS_PORT"],
+const env = {
+  hrms: {
+    hostname: process.env["HRMS_HOSTNAME"],
+    port: parseInt(process.env["HRMS_PORT"], 10),
+  },
+};
+
+const instance = fastify({
+  logger: true,
 });
+
+instance.get("/hello", () => {
+  return {
+    name: "John Doe",
+  };
+});
+
+try {
+  await instance.listen({
+    host: env.hrms.hostname,
+    port: env.hrms.port,
+  });
+} catch (err) {
+  instance.log.error(err);
+  process.exit(1);
+}
