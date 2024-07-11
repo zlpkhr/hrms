@@ -13,6 +13,6 @@ createServer((req, res) => {
     res.end();
   }
 }).listen({
-  host: process.env.HRMS_HOSTNAME,
-  port: process.env.HRMS_PORT,
+  host: process.env["HRMS_HOSTNAME"],
+  port: process.env["HRMS_PORT"],
 });
