@@ -1,4 +1,4 @@
-import { createServer } from "http";
+import { createServer } from "node:http";
 
 createServer((req, res) => {
   if (req.url === "/hello") {
