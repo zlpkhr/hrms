@@ -1,0 +1,2 @@
+built:
+	npx tsc
